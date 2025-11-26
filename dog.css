@@ -76,20 +76,35 @@ body{
 .header2 .fa-angle-down{
     padding-left: 5px;
 }
-.header2 nav{
+.header2 .drop{
+    width: 150px;
+    background-color: rgb(47, 47, 47);
+    box-shadow: 0 5px 16px rgb(2, 44, 103);
+    position: absolute;
+    border-radius: 10px;
+    overflow: hidden;
     display: none;
+    z-index: 1000;
 }
 .header2 p{
     color: rgb(178, 177, 177);
     cursor: pointer;
 }
-.header2 nav a{
+.header2 .drop a{
     text-decoration: none;
     color: rgb(178, 177, 177);
-    padding: 0 10px;
+    display: block;
+    padding: 15px 20px;
+    border-bottom: 1px solid rgb(178, 177, 177);
+    transition: 0.5s;
 }
-.header2 nav a:hover{
+.header2 .drop a:last-child{
+    border-bottom: none;
+}
+.header2 .drop a:hover{
     color: white;
+    background-color: rgb(69, 69, 69);
+    padding-left: 25px;
 }
 .header2 .firsto{
     background-color: white;
@@ -184,6 +199,13 @@ span .fa-paw{
     justify-content: space-between;
     padding: 20px 0 0 0; 
 }
+    .menu:hover .drop{
+        display: block;
+    }
+    .menu:hover .fa-angle-down{
+        rotate: 180deg;
+        transition: 0.5s ease-out;
+    }
     .header2 .first{
         display: none;
     }
